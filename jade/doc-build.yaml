@@ -4,7 +4,7 @@
 ---
 doc_tag_index_repository:
   type: master
-  url: git@github.com/ros-infrastructure/rosdoc_tag_index
+  url: git@hub.fastgit.org/ros-infrastructure/rosdoc_tag_index
 jenkins_job_timeout: 60
 jenkins_url: http://jenkins.ros.org
 notifications:

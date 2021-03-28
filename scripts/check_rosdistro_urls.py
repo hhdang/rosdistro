@@ -55,13 +55,13 @@ def main(index_url, rosdistro_name):
                 print("Repository '%s' with url '%s' must not be a local 'file://' url" % (repo_name, repo.url), file=sys.stderr)
                 success = False
             if repo.type == 'git':
-                prefixes = ['http://github.com/', 'git@github.com:']
+                prefixes = ['http://hub.fastgit.org/', 'git@hub.fastgit.org:']
                 for prefix in prefixes:
                     if repo.url.startswith(prefix):
                         print()
-                        print("Repository '%s' with url '%s' must use 'https://github.com/%s' instead" % (repo_name, repo.url, repo.url[len(prefix):]), file=sys.stderr)
+                        print("Repository '%s' with url '%s' must use 'https://hub.fastgit.org/%s' instead" % (repo_name, repo.url, repo.url[len(prefix):]), file=sys.stderr)
                         success = False
-                for prefix in prefixes + ['https://github.com/']:
+                for prefix in prefixes + ['https://hub.fastgit.org/']:
                     if repo.url.startswith(prefix) and not repo.url.endswith('.git'):
                         print()
                         print("Repository '%s' with url '%s' should end with `.git` but does not." % (repo_name, repo.url))

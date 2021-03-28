@@ -92,7 +92,7 @@ import yaml
 def get_ros2_core_repositories(ros_distro, ros_distro_yaml):
     # Now get the ros2.repos corresponding to this release, which we will use
     # to constrain the list of packages that we consider to be "core".
-    ros2_repos_url = 'https://raw.githubusercontent.com/ros2/ros2/{ros_distro}/ros2.repos'.format(ros_distro=ros_distro)
+    ros2_repos_url = 'https://raw.fastgit.org/ros2/ros2/{ros_distro}/ros2.repos'.format(ros_distro=ros_distro)
 
     with urllib.request.urlopen(ros2_repos_url) as response:
         ros2_repos_data = response.read()
@@ -174,7 +174,7 @@ def main():
 
     # First get the rosdistro distribution.yaml, which we will use as the source
     # of the devel_branch we should use.
-    rosdistro_url = 'https://raw.githubusercontent.com/ros/rosdistro/master/{ros_distro}/distribution.yaml'.format(ros_distro=ros_distro)
+    rosdistro_url = 'https://raw.fastgit.org/ros/rosdistro/master/{ros_distro}/distribution.yaml'.format(ros_distro=ros_distro)
 
     with urllib.request.urlopen(rosdistro_url) as response:
         ros_distro_data = response.read()
@@ -193,7 +193,7 @@ def main():
         release_url = repo['release']['url']
 
         release_end = release_url[19:-4]
-        tracks_url = 'https://raw.githubusercontent.com/' + release_end + '/master/tracks.yaml'
+        tracks_url = 'https://raw.fastgit.org/' + release_end + '/master/tracks.yaml'
 
         with urllib.request.urlopen(tracks_url) as response:
             tracks_data = response.read()

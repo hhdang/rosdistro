@@ -129,7 +129,7 @@ for repo_name in sorted(new_repositories + repositories_to_retry):
 
         if release_repo not in org_release_repos:
             release_org.create_repo(release_repo)
-        new_release_repo_url = f'https://github.com/{args.release_org}/{release_repo}.git'
+        new_release_repo_url = f'https://hub.fastgit.org/{args.release_org}/{release_repo}.git'
         subprocess.check_call(['git', 'remote', 'rename', 'origin', 'oldorigin'])
         subprocess.check_call(['git', 'remote', 'set-url', '--push', 'oldorigin', 'no_push'])
         subprocess.check_call(['git', 'remote', 'add', 'origin', new_release_repo_url])

@@ -1827,13 +1827,13 @@ libaria:
     wheezy:
       source:
         md5sum: 589c387995beb951edd9c77f33cb2286
-        uri: 'https://raw.github.com/amor-ros-pkg/rosaria/master/libaria.rdmanifest'
+        uri: 'https://raw.fastgit.org/amor-ros-pkg/rosaria/master/libaria.rdmanifest'
   ubuntu:
     '*': [libaria-dev]
     precise:
       source:
         md5sum: 589c387995beb951edd9c77f33cb2286
-        uri: 'https://raw.github.com/amor-ros-pkg/rosaria/master/libaria.rdmanifest'
+        uri: 'https://raw.fastgit.org/amor-ros-pkg/rosaria/master/libaria.rdmanifest'
 libasound2-dev:
   arch: [alsa-lib]
   debian: [libasound2-dev]
@@ -6619,7 +6619,7 @@ vrep:
   ubuntu:
     trusty:
       source:
-        uri: 'https://raw.githubusercontent.com/peci1/vrep_ros_bridge/rdmanifest/vrep.rdmanifest'
+        uri: 'https://raw.fastgit.org/peci1/vrep_ros_bridge/rdmanifest/vrep.rdmanifest'
 wget:
   arch: [wget]
   debian: [wget]
